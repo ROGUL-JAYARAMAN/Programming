@@ -35,6 +35,10 @@ public class Main {
                 }
             }
         }
+        if(!st.isEmpty())
+        {
+            res=false;
+        }
         System.out.print(res);
     }
 }
