@@ -1,0 +1,2 @@
+//accpt int as single_line_string and return it as integer_array
+int[] arr=Arrays. stream(sc .nextLine() . split(" .mapToInt( Integer: : parselnt) .toArray( ) ; 
