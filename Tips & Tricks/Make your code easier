@@ -1,0 +1,27 @@
+//accpt int as single_line_string and return it as integer_array
+int[] arr=Arrays.stream(sc.nextLine() . split("") .mapToInt( Integer::parseInt) .toArray( )); 
+
+
+//Character -> Integer
+Integer.parseInt(num) - Java
+int num = char_var - '0' - C++
+int num = atoi(&char_var) - C++
+
+// Character -> String
+String.valueOf(char);
+
+//String -> Character
+str.charAt(index)
+string var(1,char)
+
+//check whether the character is number
+Character.isDigit(char) - Java
+isDigit(char) - C++
+
+//Reverse a string 
+    //in java -> convert string to string_builder
+StringBuilder str_builder=new StringBuilder(original_str)
+String rev=str_builder.reverse().toString();
+    
+    //in c++
+reverse(str.begin(),str.end());

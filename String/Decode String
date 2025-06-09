@@ -1,0 +1,48 @@
+//  Two Stack -> one for integer & other for character
+//  Travse -> push -> until ']'
+//  pop -> until '[' -> store - poped char in string
+//  again push -> reversly -> to char stack -> upto no of times
+//  pop -> char stack -> return
+
+class Solution {
+    public String decodeString(String s) {
+        Stack<Character> str_st=new Stack<>();
+        Stack<Integer> num_st=new Stack<>();
+        int len=s.length();
+        for(int i=0;i<len;i++){
+            int number=0;   
+           if(Character.isDigit(s.charAt(i))){
+                while(Character.isDigit(s.charAt(i))){
+                    number=number*10+Integer.parseInt(String.valueOf(s.charAt(i)));
+                    i++;
+                }
+                num_st.push(number);
+            }
+            if(s.charAt(i)>='a'&&s.charAt(i)<='z'||s.charAt(i)=='['){
+                str_st.push(s.charAt(i));
+            }
+            if(s.charAt(i)==']'&&!str_st.isEmpty()&&!num_st.isEmpty()){
+                String temp="";
+                while(str_st.peek()!='['){
+                    temp+=String.valueOf(str_st.pop());
+                }
+                str_st.pop();
+                int num=num_st.pop();
+                while(num>0)
+                {
+                    int temp_len=temp.length();
+                    for(int j=temp_len-1;j>=0;j--)
+                    {
+                        str_st.push(temp.charAt(j));
+                    }
+                    num--;
+                }
+            }
+        }
+        StringBuilder res=new StringBuilder("");
+        while(!str_st.isEmpty()){
+            res.append(str_st.pop());
+        }
+        return res.reverse().toString();
+    }
+}

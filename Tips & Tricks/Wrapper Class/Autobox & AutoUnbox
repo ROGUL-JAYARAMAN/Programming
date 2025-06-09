@@ -1,0 +1,13 @@
+| Wrapper Class | Primitive Type | Method to Convert to Primitive |
+| ------------- | -------------- | ------------------------------ |
+| `Integer`     | `int`          | `.intValue()`                  |
+| `Double`      | `double`       | `.doubleValue()`               |
+| `Float`       | `float`        | `.floatValue()`                |
+| `Long`        | `long`         | `.longValue()`                 |
+| `Short`       | `short`        | `.shortValue()`                |
+| `Byte`        | `byte`         | `.byteValue()`                 |
+| `Character`   | `char`         | `.charValue()`                 |
+| `Boolean`     | `boolean`      | `.booleanValue()`              |
+
+
+Syntax -> variable.Method()
